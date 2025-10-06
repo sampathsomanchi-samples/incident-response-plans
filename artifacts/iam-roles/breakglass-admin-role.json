@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "BreakglassAdmin",
+      "Effect": "Allow",
+      "Action": "*",
+      "Resource": "*",
+      "Condition": {
+        "Bool": {
+          "aws:MultiFactorAuthPresent": "true"
+        },
+        "StringEquals": {
+          "aws:PrincipalTag/Breakglass": "True"
+        }
+      }
+    }
+  ]
+}

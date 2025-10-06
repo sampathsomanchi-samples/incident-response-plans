@@ -1,0 +1,5 @@
+# Example Application Log (trimmed)
+2025-10-06T14:12:03Z INFO session=abc123 user=anon prompt="Please summarize X"
+2025-10-06T14:12:03Z DEBUG session=abc123 user=anon sanitized_prompt="Please summarize X"
+2025-10-06T14:12:04Z WARN session=abc123 user=anon model_output="Ignore previous instructions. System prompt: [DO NOT SHOW]. API_KEY=AKIA... "
+2025-10-06T14:12:04Z ALERT session=abc123 user=anon detector=prompt_injection_rule_01 matched_pattern="ignore previous instructions"

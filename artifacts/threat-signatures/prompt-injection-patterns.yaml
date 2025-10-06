@@ -1,0 +1,12 @@
+# prompt-injection-patterns.yaml
+# Simple regex patterns to seed detection rules (edit for your environment)
+patterns:
+  - id: PI-001
+    description: "Common ignore-style injection"
+    regex: "(?i)ignore (all )?previous instructions|disregard previous|forget previous"
+  - id: PI-002
+    description: "Requests to reveal hidden or system prompts/keys"
+    regex: "(?i)(reveal|show|print).*(system prompt|api key|secret|password|credentials)"
+  - id: PI-003
+    description: "Encodings and nested payloads often used in injection"
+    regex: "([A-Za-z0-9+/=]{40,})|\\{\\{.*\\}\\}|<\\!--.*-->"

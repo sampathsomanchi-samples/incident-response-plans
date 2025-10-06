@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "IRRoleLimitedActions",
+      "Effect": "Allow",
+      "Action": [
+        "iam:ListRoles",
+        "iam:PassRole",
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:InvokeFunction",
+        "ec2:DescribeInstances",
+        "logs:DescribeLogGroups",
+        "logs:GetLogEvents",
+        "cloudtrail:LookupEvents",
+        "bedrock:StopModelInvocation"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
